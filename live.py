@@ -1,7 +1,7 @@
 import MemoryGame
 import GuessGame
 import CurrencyRouletteGame
-
+import Score
 
 def welcome(name):
     print(f"Hello {name} and welcome to the World of Games. Here you can find many cool games to play")
@@ -14,12 +14,17 @@ def load_game():
         if game_difficulty > 0 and game_difficulty <6:
             print("Geat Job!")
             if game_number == 1:
-                MemoryGame.play(game_difficulty)
+                if MemoryGame.play(game_difficulty)==True:
+                    Score.add_score(game_difficulty)
+
             elif game_number == 2:
-                GuessGame.play(game_difficulty)
+                if GuessGame.play(game_difficulty)==True:
+                    Score.add_score(game_difficulty)
             else:
-                CurrencyRouletteGame.play(game_difficulty)
+                if CurrencyRouletteGame.play(game_difficulty)==True:
+                    Score.add_score(game_difficulty)
         else:
             print("difficulty number not in range")
     else:
         print("game number not in range")
+
