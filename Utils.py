@@ -8,3 +8,5 @@ def create_new_file():
         print("unexpected error")
     finally:
         f.close()
+
+create_new_file()

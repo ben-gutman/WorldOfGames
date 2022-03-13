@@ -12,3 +12,4 @@ def add_score(difficulty):
         print("unexpected error")
     finally:
         f.close()
+
