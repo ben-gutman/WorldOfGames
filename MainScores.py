@@ -12,6 +12,8 @@ def index():
         return f'<html><head><title>Scores Game</title></head><body><h1>The score is <div id="score">{current_score}</div></h1></body></html>'
     except:
         return f'<<html><head><title>Scores Game</title></head><body><body><h1><div id="score" style="color:red">{"ERROR"}</div></h1></body></html>'
+    finally:
+        file.close()
 
 
 if __name__ == "__main__":
