@@ -14,7 +14,7 @@ def score_check(site_a):
         return False
 
 def main_function():
-    if score_check('http://10.0.2.15:5001/')==True:
+    if score_check('http://172.17.0.2:5001/')==True:
         sys.exit(0)
     else:
         sys.exit(-1)
