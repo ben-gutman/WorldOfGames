@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('CheckOut'){
             steps{
-                git url: 'https://github.com/ben-gutman/WorldOfGames.git', branch: 'main'
+                git 'https://github.com/ben-gutman/WorldOfGames.git'
             }
         }
          stages {
