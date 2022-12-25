@@ -6,7 +6,6 @@ pipeline {
                 git 'https://github.com/ben-gutman/WorldOfGames.git'
             }
         }
-         stages {
         stage('Build'){
             steps{
                 sh 'docker build -t my-flask .'
